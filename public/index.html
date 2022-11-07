@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>redis-eel</title>
+
+        <script type="text/javascript" src="/eel.js"></script>
+        <script type="text/javascript">
+        eel.expose(updateInfo);
+        function updateInfo(infoText) {
+            document.getElementById("infoText").innerText = `${infoText}`;
+        }
+        </script>
+    </head>
+
+    <body>
+        <button onclick="eel.updateCounter(this.innerText)">Java</button>
+        <button onclick="eel.updateCounter(this.innerText)">Python</button>
+
+        <p id="infoText"></p>
+    </body>
+</html>
